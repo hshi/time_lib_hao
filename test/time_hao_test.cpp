@@ -40,8 +40,9 @@ void time_init_end_test()
  while(clock() != end_time);
 
  timer.end();
- //timer.print_time(timer.timerend);
- //timer.print_accumulation();
+ timer.print_init();
+ timer.print_end();
+ timer.print_accumulation();
  
  if(lround(timer.seconds)==sec) cout<<"Time init and Time end passed the test!\n";
  else cout<<"Warning!!!!Time init and Time end failed the test!\n";

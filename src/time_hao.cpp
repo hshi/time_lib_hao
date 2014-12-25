@@ -37,8 +37,9 @@ void Timer_hao::end()
 }
 
 
-void Timer_hao::print_time(const time_t& x) const {cout<<ctime(&x)<<endl;}  
+void Timer_hao::print_init() const {cout<<ctime(&timerinit)<<endl;}  
 
+void Timer_hao::print_end() const {cout<<ctime(&timerend)<<endl;}  
 
 void Timer_hao::print_accumulation() const
 {

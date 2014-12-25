@@ -18,7 +18,8 @@ class Timer_hao
 
   void init();
   void end();
-  void print_time(const time_t& ) const;
+  void print_init() const;
+  void print_end() const;
   void print_accumulation() const;
 };
 

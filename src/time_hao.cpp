@@ -43,6 +43,7 @@ void Timer_hao::print_end() const {cout<<ctime(&timerend)<<endl;}
 
 void Timer_hao::print_accumulation() const
 {
+    if(timing_flag!=0) {cout<<"WARNING!!! It is still timing, the accumulation will not contain current timing circle!";}
     struct tm timeinfo=second_to_tm(seconds);
     cout<<"\n\n";
     cout<<"Total seconds: "<<seconds<<"\n";

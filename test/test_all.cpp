@@ -1,8 +1,10 @@
 #ifdef MPI_HAO
 #include<mpi.h>
 #endif
-
+#include<iostream>
 #include "time_hao.h"
+
+using namespace std;
 
 void time_hao_test();
 
@@ -17,6 +19,7 @@ int main(int argc, char** argv)
 
     if(rank==0)
     {
+        cout<<"\n\n\n=======Testing======="<<endl;
         time_hao_test();
     }
 

@@ -23,14 +23,14 @@ Timer_hao& Timer_hao::operator  = (const Timer_hao& x)
 
 void Timer_hao::init()
 {
-    if(timing_flag!=0) {cout<<"ERROR!!! Cannot initial the timer before it is ended!"<<endl; throw std::runtime_error(" ");}
+    if(timing_flag!=0) {cout<<"ERROR!!! Cannot initial the timer before it is ended!"<<endl; exit(1);}
     time(&timerinit);
     timing_flag=1;
 }
 
 void Timer_hao::end()
 {
-    if(timing_flag!=1) {cout<<"ERROR!!! Cannot end the timer before it is initialized!"<<endl; throw std::runtime_error(" ");}
+    if(timing_flag!=1) {cout<<"ERROR!!! Cannot end the timer before it is initialized!"<<endl; exit(1);}
     time(&timerend);
     seconds+=difftime(timerend,timerinit);
     timing_flag=0;

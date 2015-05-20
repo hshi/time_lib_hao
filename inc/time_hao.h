@@ -1,5 +1,5 @@
-#ifndef TIME_HAO
-#define TIME_HAO
+#ifndef TIME_HAO_H
+#define TIME_HAO_H
 
 #include <time.h>
 

@@ -37,6 +37,12 @@ void Timer_hao::end()
 }
 
 
+void Timer_hao::clear()
+{
+    if(timing_flag!=0) {cout<<"ERROR!!! Cannot clear the timer before it is ended!"<<endl; exit(1);}
+    seconds=0; //clear the time to zero
+}
+
 void Timer_hao::print_init() const {cout<<ctime(&timerinit)<<endl;}  
 
 void Timer_hao::print_end() const {cout<<ctime(&timerend)<<endl;}  

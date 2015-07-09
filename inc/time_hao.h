@@ -18,6 +18,7 @@ class Timer_hao
    
     void init();
     void end();
+    void clear();
     void print_init() const;
     void print_end() const;
     void print_accumulation() const;

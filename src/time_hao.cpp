@@ -1,10 +1,10 @@
 #include <iostream>
+#include <iomanip> 
 #include <stdexcept>
 #include <cmath>
 #include "time_hao.h"
 
-using std::cout;
-using std::endl;
+using namespace std;
 
 
 Timer_hao::Timer_hao():seconds(0),timing_flag(0) {}
@@ -51,6 +51,7 @@ void Timer_hao::print_accumulation() const
 {
     if(timing_flag!=0) {cout<<"WARNING!!! It is still timing, the accumulation will not contain current timing circle!";}
     struct tm timeinfo=second_to_tm(seconds);
+    cout<<setprecision(15);
     cout<<"Total seconds: "<<seconds<<"\n";
     cout<<"Total Hours: "<<seconds/3600.0<<"\n"; 
     cout<<"Readable Time: "<<timeinfo.tm_mday<<" days, "<<timeinfo.tm_hour<<" hours, "

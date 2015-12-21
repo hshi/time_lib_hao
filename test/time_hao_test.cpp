@@ -1,6 +1,11 @@
 #include <iostream>
 #include <cmath>
 #include "time_hao.h"
+
+#ifdef MPI_HAO
+#include <mpi.h>
+#endif
+
 using namespace std;
 
 void time_class_test()
@@ -64,7 +69,17 @@ void second_to_tm_test()
 
 void time_hao_test()
 {
-    time_class_test();
-    time_init_end_test();
-    second_to_tm_test();
+    int rank=0;
+#ifdef MPI_HAO
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+#endif
+
+    if(rank==0)
+    {
+        time_class_test();
+        time_init_end_test();
+        second_to_tm_test();
+    }
+
+    if(rank==0) cout<<"\n";
 }

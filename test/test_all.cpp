@@ -17,11 +17,8 @@ int main(int argc, char** argv)
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 #endif
 
-    if(rank==0)
-    {
-        cout<<"\n\n\n=======Testing======="<<endl;
-        time_hao_test();
-    }
+    if(rank==0) cout<<"\n\n\n=======Testing======="<<endl;
+    time_hao_test();
 
 #ifdef MPI_HAO
     MPI_Finalize();

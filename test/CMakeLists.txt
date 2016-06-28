@@ -1,7 +1,9 @@
-set(time_test_srcs time_hao_test.cpp test_all.cpp)
+set(test_exe timetest)
 
-add_executable(timetest ${time_test_srcs})
+file(GLOB test_srcs "*.cpp")
 
-target_link_libraries(timetest timehao)
+add_executable(${test_exe} ${test_srcs})
 
-install(TARGETS timetest  DESTINATION test)
+target_link_libraries(${test_exe} timehao)
+
+install(TARGETS ${test_exe}  DESTINATION test)

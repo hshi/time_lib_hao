@@ -1,5 +1,7 @@
-set(time_srcs time_hao.cpp)
+set(src_lib timehao)
 
-add_library(timehao STATIC ${time_srcs})
+file(GLOB srcs "*.cpp")
 
-install(TARGETS timehao  DESTINATION lib)
+add_library(${src_lib} STATIC ${srcs})
+
+install(TARGETS ${src_lib}  DESTINATION lib)

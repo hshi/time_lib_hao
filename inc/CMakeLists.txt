@@ -1,3 +1,3 @@
-set(header time_hao.h)
+file(GLOB header "*.h")
 
 install(FILES ${header}  DESTINATION include)

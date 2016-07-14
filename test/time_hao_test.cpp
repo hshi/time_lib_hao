@@ -28,8 +28,8 @@ void time_class_test()
     if(abs(timer_secp.seconds-0.0)>1e-12 ) flag++;
     if(timer_secp.timing_flag!=0) flag++;
    
-    if(flag==0) cout<<"Time class passed the test!\n";
-    else cout<<"Warning!!!!Time class failed the test!\n"; 
+    if(flag==0) cout<<"PASSED! Time class passed the test!"<<endl;
+    else cout<<"Warning!!!!Time class failed the test!"<<endl; 
 }
 
 
@@ -49,8 +49,8 @@ void time_init_end_test()
     //timer.print_end();
     //timer.print_accumulation();
     
-    if(lround(timer.seconds)==sec) cout<<"Time init and Time end passed the test!\n";
-    else cout<<"Warning!!!!Time init and Time end failed the test!\n";
+    if(lround(timer.seconds)==sec) cout<<"PASSED! Time init and Time end passed the test!"<<endl;
+    else cout<<"Warning!!!!Time init and Time end failed the test!"<<endl;
 }
 
 
@@ -63,8 +63,8 @@ void second_to_tm_test()
     if(timeinfo.tm_hour!=4) flag++;
     if(timeinfo.tm_min!=3)  flag++;
     if(timeinfo.tm_sec!=2)  flag++;
-    if(flag==0) cout<<"Second_to_tm passed the test!\n";
-    else cout<<"Warning!!!!Second_to_tm failed the test!\n";
+    if(flag==0) cout<<"PASSED! Second_to_tm passed the test!"<<endl;
+    else cout<<"Warning!!!!Second_to_tm failed the test!"<<endl;
 }
 
 void time_hao_test()
@@ -81,5 +81,5 @@ void time_hao_test()
         second_to_tm_test();
     }
 
-    if(rank==0) cout<<"\n";
+    if(rank==0) cout<<" "<<endl;
 }
